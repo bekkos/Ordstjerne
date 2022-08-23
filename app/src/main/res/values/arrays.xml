@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="no_array_1">
+        <item>AGRFNST</item>
+        <item>FANGST</item>
+        <item>GNAFS</item>
+        <item>FANT</item>
+        <item>FARS</item>
+        <item>FART</item>
+        <item>FRAS</item>
+        <item>GRAF</item>
+        <item>RAFS</item>
+        <item>SAFT</item>
+        <item>TAFS</item>
+    </array>
+    <array name="no_array_2">
+        <item>AHYIRTK</item>
+        <item>TYRKIA</item>
+        <item>HITRA</item>
+        <item>HAIK</item>
+        <item>IRAK</item>
+        <item>RIKT</item>
+        <item>THAI</item>
+    </array>
+    <array name="no_array_3">
+        <item>AJFEOPS</item>
+        <item>FJASE</item>
+        <item>JAFSE</item>
+        <item>EPOSA</item>
+        <item>ESPA</item>
+        <item>FASE</item>
+        <item>EPOS</item>
+        <item>FJES</item>
+        <item>OASE</item>
+        <item>PESO</item>
+        <item>SAFE</item>
+        <item>SJEF</item>
+        <item>OFSE</item>
+    </array>
+    <array name="no_array_4">
+        <item>KSURFGP</item>
+        <item>GRUSK</item>
+        <item>GRUS</item>
+        <item>KRUS</item>
+        <item>PURK</item>
+        <item>RUFS</item>
+        <item>RUSK</item>
+        <item>SKRU</item>
+        <item>SKUR</item>
+        <item>SURF</item>
+    </array>
+    <array name="no_array_5">
+        <item>ØOHFERT</item>
+        <item>FØRHET</item>
+        <item>HOFTER</item>
+        <item>FORET</item>
+        <item>FORTE</item>
+        <item>FOTER</item>
+        <item>FRØET</item>
+        <item>FØRET</item>
+        <item>FØRTE</item>
+        <item>HOFTE</item>
+        <item>OFRET</item>
+        <item>RØFT</item>
+        <item>TROFE</item>
+        <item>FORT</item>
+        <item>FØRE</item>
+        <item>FØRT</item>
+        <item>OFRE</item>
+        <item>OFTE</item>
+        <item>RØFT</item>
+    </array>
+</resources>

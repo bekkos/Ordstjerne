@@ -13,7 +13,9 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:backgroundTint="@color/design_default_color_error"
-        android:onClick="test"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="click"
         android:text="A"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,15 +23,36 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.652" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="-24dp"
+        android:backgroundTint="@color/black"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="click"
+        android:text="C"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btn2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="8dp"
         android:backgroundTint="@color/black"
-        android:onClick="test"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="click"
         android:text="B"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn4"
@@ -44,9 +67,11 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="-16dp"
+        android:layout_marginBottom="-24dp"
         android:backgroundTint="@color/black"
-        android:onClick="test"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="click"
         android:text="D"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btn4"
@@ -57,29 +82,14 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/btn3"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="-16dp"
-        android:backgroundTint="@color/black"
-        android:onClick="test"
-        android:text="C"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/btn4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btn2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
         android:id="@+id/btn6"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/black"
-        android:onClick="test"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="click"
         android:text="E"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,10 +103,12 @@
         android:id="@+id/btn5"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginTop="-16dp"
+        android:layout_marginTop="-24dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="@color/black"
-        android:onClick="test"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="click"
         android:text="G"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -111,9 +123,11 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="-16dp"
+        android:layout_marginTop="-24dp"
         android:backgroundTint="@color/black"
-        android:onClick="test"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="click"
         android:text="F"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -142,12 +156,14 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/btn2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.595" />
 
     <Button
         android:id="@+id/check"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="100dp"
@@ -160,7 +176,7 @@
 
     <Button
         android:id="@+id/clear"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginBottom="100dp"
@@ -179,9 +195,83 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/btn2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guessDisplay"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.345" />
+
+    <TextView
+        android:id="@+id/titleOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="FREMGANG"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="30"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleOutput" />
+
+    <ProgressBar
+        android:id="@+id/progressOutput"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreOutput" />
+
+    <TextView
+        android:id="@+id/levelOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="NIVÅ 1"
+        android:textColor="@color/material_on_primary_disabled"
+        app:layout_constraintBottom_toTopOf="@+id/titleOutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
