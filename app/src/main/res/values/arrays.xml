@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="no_array_1">
-        <item>AGRFNST</item>
-        <item>FANGST</item>
-        <item>GNAFS</item>
-        <item>FANT</item>
-        <item>FARS</item>
-        <item>FART</item>
-        <item>FRAS</item>
-        <item>GRAF</item>
-        <item>RAFS</item>
-        <item>SAFT</item>
-        <item>TAFS</item>
+        <item>WRTYFHS</item>
+        <item>FRYST</item>
+        <item>FYRST</item>
+        <item>FYRT</item>
+        <item>HYRT</item>
+        <item>RYST</item>
+        <item>STYR</item>
     </array>
     <array name="no_array_2">
         <item>AHYIRTK</item>
@@ -23,19 +19,17 @@
         <item>THAI</item>
     </array>
     <array name="no_array_3">
-        <item>AJFEOPS</item>
-        <item>FJASE</item>
-        <item>JAFSE</item>
-        <item>EPOSA</item>
-        <item>ESPA</item>
-        <item>FASE</item>
-        <item>EPOS</item>
-        <item>FJES</item>
-        <item>OASE</item>
-        <item>PESO</item>
-        <item>SAFE</item>
-        <item>SJEF</item>
-        <item>OFSE</item>
+        <item>AGRFNST</item>
+        <item>FANGST</item>
+        <item>GNAFS</item>
+        <item>FANT</item>
+        <item>FARS</item>
+        <item>FART</item>
+        <item>FRAS</item>
+        <item>GRAF</item>
+        <item>RAFS</item>
+        <item>SAFT</item>
+        <item>TAFS</item>
     </array>
     <array name="no_array_4">
         <item>KSURFGP</item>
@@ -50,6 +44,48 @@
         <item>SURF</item>
     </array>
     <array name="no_array_5">
+        <item>AJFEOPS</item>
+        <item>FJASE</item>
+        <item>JAFSE</item>
+        <item>EPOSA</item>
+        <item>ESPA</item>
+        <item>FASE</item>
+        <item>EPOS</item>
+        <item>FJES</item>
+        <item>OASE</item>
+        <item>PESO</item>
+        <item>SAFE</item>
+        <item>SJEF</item>
+        <item>OFSE</item>
+    </array>
+    <array name="no_array_6">
+        <item>KLASFGE</item>
+        <item>FLASKE</item>
+        <item>FLAKSE</item>
+        <item>FALSKE</item>
+        <item>GAFLES</item>
+        <item>GLEFSA</item>
+        <item>GLAFSE</item>
+        <item>KLAGE</item>
+        <item>FAKSE</item>
+        <item>AKSEL</item>
+        <item>LEFSA</item>
+        <item>LEKSA</item>
+        <item>LAGES</item>
+        <item>FLESK</item>
+        <item>AKSE</item>
+        <item>ASKE</item>
+        <item>ELSK</item>
+        <item>FASE</item>
+        <item>SAFE</item>
+        <item>SALG</item>
+        <item>SEGL</item>
+        <item>SKAG</item>
+        <item>SKAL</item>
+        <item>SLAG</item>
+        <item>SLAK</item>
+    </array>
+    <array name="no_array_7">
         <item>ØOHFERT</item>
         <item>FØRHET</item>
         <item>HOFTER</item>

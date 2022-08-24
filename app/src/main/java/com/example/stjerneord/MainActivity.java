@@ -20,6 +20,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     List<Button> buttons = new ArrayList<>();
@@ -53,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateUi() {
+        /*
+        Denne funksjonen oppdaterer alt av UI og kjøres etter endringer i spillets "state". F.eks
+        ved endring av score eller overgang til nytt nivå.
+         */
+
         // Draw buttons
         for(int x = 0; x < buttons.size(); x++) {
             buttons.get(x).setText("" + activeStage.getLetters().charAt(x));
@@ -79,6 +85,32 @@ public class MainActivity extends AppCompatActivity {
         tv.setText((String) tv.getText() + letter);
         animateViewShake(view);
 
+    }
+
+    public void hint(View view) {
+        /*
+        Funksjonen leter etter ord som ikke allerede har blitt funnet, obstrukterer de og
+        viser de til spilleren. Funksjonen kjøres hovedsaklig ved bruker-input.
+        */
+        while(true) {
+            if(activeStage.getDiscoveredWords().size() == activeStage.getWords().size()) break;
+            String word = activeStage.getWords().get(new Random().nextInt(activeStage.getWords().size()));
+            if(!activeStage.getDiscoveredWords().contains(word)) {
+                //
+                String out = "";
+                for(int i = 0; i < word.length(); i++) {
+                    if(i == 0 || i == word.length() / 2) {
+                        out += "*";
+                    } else {
+                        out += word.charAt(i);
+                    }
+                }
+                // Put out at hint location
+                TextView tv = (TextView) findViewById(R.id.hintOutput);
+                tv.setText(out);
+                break;
+            }
+        }
     }
 
     public void check(View view) {
@@ -138,6 +170,19 @@ public class MainActivity extends AppCompatActivity {
         animateViewShake(view);
     }
 
+    public void clearHint(View view) {
+        TextView tv2 = (TextView) findViewById(R.id.hintOutput);
+        tv2.setText("");
+    }
+
+
+    public void setErrorMessage(String msg) {
+        TextView errorOut = (TextView) findViewById(R.id.errorMsg);
+        errorOut.setTextColor(Color.RED);
+        errorOut.setText(msg);
+    }
+
+    /* ANIMASJONER */
     public void animateViewSpin(View view) {
         ObjectAnimator animation = ObjectAnimator.ofFloat(view, "rotationY", 180);
         animation.setDuration(250);
@@ -182,13 +227,8 @@ public class MainActivity extends AppCompatActivity {
                 view.setScaleX(1f);
                 view.setScaleY(1f);
                 clear(view);
+                clearHint(view);
             }
         });
-    }
-
-    public void setErrorMessage(String msg) {
-        TextView errorOut = (TextView) findViewById(R.id.errorMsg);
-        errorOut.setTextColor(Color.RED);
-        errorOut.setText(msg);
     }
 }

@@ -12,6 +12,16 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".FrontPageActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
