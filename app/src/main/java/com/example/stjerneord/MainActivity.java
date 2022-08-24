@@ -163,6 +163,23 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("level", level);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if(savedInstanceState != null) {
+            level = savedInstanceState.getInt("level");
+        }
+    }
+
+
+    /* TOOLBOX */
     public void clear(View view) {
         TextView tv = (TextView) findViewById(R.id.guessDisplay);
         tv.setText("");

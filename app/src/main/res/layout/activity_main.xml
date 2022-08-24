@@ -256,7 +256,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:text="NIVÅ 1"
-        android:textColor="@color/material_on_primary_disabled"
+        android:textColor="@color/material_on_background_emphasis_high_type"
         app:layout_constraintBottom_toTopOf="@+id/titleOutput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
