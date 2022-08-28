@@ -1,6 +1,8 @@
 package com.example.stjerneord.models;
 
 import android.content.res.TypedArray;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,4 +64,6 @@ public class WordStage {
     public Character getMainLetter() {
         return mainLetter;
     }
+
+
 }

@@ -1,11 +1,15 @@
 package com.example.stjerneord;
 
+import static android.graphics.Color.rgb;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,6 +19,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.stjerneord.models.WordStage;
+import com.google.gson.Gson;
 
 import org.w3c.dom.Text;
 
@@ -34,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+        getWindow().setStatusBarColor(rgb(44, 62, 80));
 
         // Get all buttons, add to buttonList
         for (int i = 1; i < 8; i++) {
@@ -46,10 +52,29 @@ public class MainActivity extends AppCompatActivity {
             stages.add(wordStage);
         }
         activeStage = stages.get(0);
-        WordStage buffer = stages.get(0);
-        stages.remove(0);
-        stages.add(buffer);
         level = 0;
+
+        /* Load stage from savedata */
+        SharedPreferences prefs = this.getSharedPreferences("com.example.app", Context.MODE_PRIVATE);
+        Gson gson = new Gson();
+
+        String json = prefs.getString("activeStage", "");
+        int levelBuffer = prefs.getInt("level", -1);
+
+        if(levelBuffer != -1) {
+            level = levelBuffer;
+            System.out.println("-- DEBUG --");
+            System.out.println("LOADED level");
+        }
+
+        if(!json.equals("")) {
+            WordStage obj = gson.fromJson(json, WordStage.class);
+            activeStage = obj;
+            System.out.println("-- DEBUG --");
+            System.out.println("LOADED Stage!");
+        }
+
+
         updateUi();
     }
 
@@ -117,11 +142,11 @@ public class MainActivity extends AppCompatActivity {
         animateViewShake(view);
         TextView tv = (TextView) findViewById(R.id.guessDisplay);
         if(tv.getText().length() <= 3) {
-            setErrorMessage("Order må være mer enn 3 bokstaver.");
+            setErrorMessage("Ordet må være mer enn 3 bokstaver.");
             return;
         }
         if(tv.getText().length() > 7) {
-            setErrorMessage("Order kan ikke være mer enn 7 bokstaver.");
+            setErrorMessage("Ordet kan ikke være mer enn 7 bokstaver.");
             return;
         }
         setErrorMessage("");
@@ -161,6 +186,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+
+
+
     }
 
 
@@ -197,6 +225,21 @@ public class MainActivity extends AppCompatActivity {
         TextView errorOut = (TextView) findViewById(R.id.errorMsg);
         errorOut.setTextColor(Color.RED);
         errorOut.setText(msg);
+    }
+
+
+    /* LAGRING */
+
+    @Override
+    public void onPause() {
+        SharedPreferences prefs = this.getSharedPreferences("com.example.app", Context.MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = gson.toJson(activeStage);
+        prefs.edit().putString("activeStage", json).apply();
+        prefs.edit().putInt("level", level).apply();
+        System.out.println("-- DEBUG --");
+        System.out.println("SAVED STATE!");
+        super.onPause();
     }
 
     /* ANIMASJONER */
@@ -240,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animator animation) {
                 TextView a = (TextView) view;
-                a.setTextColor(Color.BLACK);
+                a.setTextColor(Color.WHITE);
                 view.setScaleX(1f);
                 view.setScaleY(1f);
                 clear(view);
