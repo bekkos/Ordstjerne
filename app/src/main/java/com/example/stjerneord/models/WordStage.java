@@ -6,6 +6,7 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class WordStage {
     private String letters;
@@ -16,7 +17,7 @@ public class WordStage {
     int maxScore;
 
     public WordStage(String[] stageData) {
-        this.letters = stageData[0];
+        this.letters = stageData[0].toUpperCase();
         this.mainLetter = letters.charAt(3);
         this.words = new ArrayList<>();
         this.discoveredWords = new ArrayList<>();
@@ -25,8 +26,6 @@ public class WordStage {
             words.add(stageData[i]);
         }
         this.maxScore = words.size();
-
-        System.out.println(words.toString());
     }
 
     public void addDiscoveredWord(String word) {

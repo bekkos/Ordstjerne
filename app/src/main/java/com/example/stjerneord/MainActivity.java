@@ -20,9 +20,12 @@ import android.widget.TextView;
 
 import com.example.stjerneord.models.WordStage;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import org.w3c.dom.Text;
 
+import java.lang.reflect.Type;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     List<WordStage> stages = new ArrayList<>();
     WordStage activeStage;
     int level;
+    int language;
 
 
     @Override
@@ -41,39 +45,58 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         getWindow().setStatusBarColor(rgb(44, 62, 80));
 
+        // Check Language Setting
+        SharedPreferences prefsSettings = this.getSharedPreferences("Settings", Context.MODE_PRIVATE);
+        language = prefsSettings.getInt("language", 0);
+        System.out.println("-- f  --");
+        System.out.println(language);
+
+
         // Get all buttons, add to buttonList
         for (int i = 1; i < 8; i++) {
             int id = getResources().getIdentifier("btn"+i, "id", getPackageName());
             buttons.add((Button) findViewById(id));
         }
         // Load letters and anagrams, create wordStages.
-        for(int i = 0; i < 5; i++) {
-            WordStage wordStage = new WordStage(getResources().getStringArray(R.array.no_array_1 + i));
+        for(int i = 1; i < 42; i++) {
+            String resName = "nb_array_" + i;
+             if(language == 1) {
+                resName = "en_array_" + i;
+            }
+            int resId = MainActivity.this.getResources().getIdentifier(
+                    resName,
+                    "array",
+                    MainActivity.this.getPackageName()
+            );
+            WordStage wordStage = new WordStage(getResources().getStringArray(resId));
             stages.add(wordStage);
         }
         activeStage = stages.get(0);
         level = 0;
 
-        /* Load stage from savedata */
-        SharedPreferences prefs = this.getSharedPreferences("com.example.app", Context.MODE_PRIVATE);
+
+        // LOAD
+        SharedPreferences prefs = this.getSharedPreferences("SaveData", Context.MODE_PRIVATE);
         Gson gson = new Gson();
+        int saveLanguage = prefs.getInt("language", 0);
+        System.out.println("--- j");
+        System.out.println(saveLanguage);
+        if(language == saveLanguage) {
+            // Load activeStage
+            String bufferActiveStage = prefs.getString("activeStage", "");
+            if(!bufferActiveStage.equals("")) {
+                activeStage = gson.fromJson(bufferActiveStage, WordStage.class);
 
-        String json = prefs.getString("activeStage", "");
-        int levelBuffer = prefs.getInt("level", -1);
+            }
 
-        if(levelBuffer != -1) {
-            level = levelBuffer;
-            System.out.println("-- DEBUG --");
-            System.out.println("LOADED level");
+            // Load stages
+            String bufferStages = prefs.getString("stages", "");
+            if(!bufferStages.equals("")) {
+                Type type = new TypeToken<List<WordStage>>(){}.getType();
+                stages = gson.fromJson(bufferStages, type);
+            }
         }
-
-        if(!json.equals("")) {
-            WordStage obj = gson.fromJson(json, WordStage.class);
-            activeStage = obj;
-            System.out.println("-- DEBUG --");
-            System.out.println("LOADED Stage!");
-        }
-
+        level = prefs.getInt("level", 0);
 
         updateUi();
     }
@@ -177,10 +200,8 @@ public class MainActivity extends AppCompatActivity {
         if(activeStage.getScore() == activeStage.getMaxScore()) {
             // PLAY STAGE END SCREEN
             activeStage.setScore(0);
-            activeStage = stages.get(0);
-            WordStage buffer = stages.get(0);
+            activeStage = stages.get(1);
             stages.remove(0);
-            stages.add(buffer);
             level++;
             updateUi();
         }
@@ -232,14 +253,24 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onPause() {
-        SharedPreferences prefs = this.getSharedPreferences("com.example.app", Context.MODE_PRIVATE);
+
+        SharedPreferences prefs = this.getSharedPreferences("SaveData", Context.MODE_PRIVATE);
         Gson gson = new Gson();
-        String json = gson.toJson(activeStage);
-        prefs.edit().putString("activeStage", json).apply();
+
+        String activeStageJSON = gson.toJson(activeStage);
+        // Save active stage object
+        prefs.edit().putString("activeStage", activeStageJSON).apply();
+        // Save level variable
         prefs.edit().putInt("level", level).apply();
-        System.out.println("-- DEBUG --");
-        System.out.println("SAVED STATE!");
+        // Save stages object
+        String stagesJSON = gson.toJson(stages);
+        prefs.edit().putString("stages", stagesJSON).apply();
+
+        prefs.edit().putInt("language", language).apply();
+
+
         super.onPause();
+
     }
 
     /* ANIMASJONER */

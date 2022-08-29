@@ -27,7 +27,7 @@
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/black"
         android:onClick="startSettings"
-        android:text="INSTILLINGER"
+        android:text="INNSTILLINGER"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

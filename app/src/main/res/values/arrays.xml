@@ -1,109 +1,1445 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="no_array_1">
-        <item>WRTYFHS</item>
-        <item>FRYST</item>
-        <item>FYRST</item>
-        <item>FYRT</item>
-        <item>HYRT</item>
-        <item>RYST</item>
-        <item>STYR</item>
+    <array name="en_array_1">
+        <item>ETOSPCD</item>
+        <item>STOPE</item>
+        <item>SOTE</item>
+        <item>ESTOP</item>
+        <item>TOSE</item>
     </array>
-    <array name="no_array_2">
-        <item>AHYIRTK</item>
-        <item>TYRKIA</item>
-        <item>HITRA</item>
-        <item>HAIK</item>
-        <item>IRAK</item>
-        <item>RIKT</item>
-        <item>THAI</item>
+    <array name="en_array_2">
+        <item>NAIDSER</item>
+        <item>SARDINE</item>
+        <item>NAID</item>
+        <item>DIAN</item>
+        <item>SDAIN</item>
     </array>
-    <array name="no_array_3">
-        <item>AGRFNST</item>
-        <item>FANGST</item>
-        <item>GNAFS</item>
-        <item>FANT</item>
-        <item>FARS</item>
-        <item>FART</item>
-        <item>FRAS</item>
-        <item>GRAF</item>
-        <item>RAFS</item>
-        <item>SAFT</item>
-        <item>TAFS</item>
+    <array name="en_array_3">
+        <item>TINUCED</item>
+        <item>INCUTE</item>
+        <item>TUNIC</item>
+        <item>CUTIN</item>
+        <item>UNIT</item>
     </array>
-    <array name="no_array_4">
-        <item>KSURFGP</item>
-        <item>GRUSK</item>
-        <item>GRUS</item>
-        <item>KRUS</item>
-        <item>PURK</item>
-        <item>RUFS</item>
-        <item>RUSK</item>
-        <item>SKRU</item>
-        <item>SKUR</item>
-        <item>SURF</item>
+    <array name="en_array_4">
+        <item>DEALIOU</item>
+        <item>IDEAL</item>
+        <item>LADE</item>
+        <item>DEAL</item>
+        <item>LEAD</item>
     </array>
-    <array name="no_array_5">
-        <item>AJFEOPS</item>
-        <item>FJASE</item>
-        <item>JAFSE</item>
-        <item>EPOSA</item>
-        <item>ESPA</item>
-        <item>FASE</item>
+    <array name="en_array_5">
+        <item>OLICDNU</item>
+        <item>INCLOUD</item>
+        <item>DULCINO</item>
+        <item>COIL</item>
+        <item>CLIO</item>
+    </array>
+    <array name="en_array_6">
+        <item>UAENTRL</item>
+        <item>NEUTRAL</item>
+        <item>NATURE</item>
+        <item>AUNE</item>
+        <item>AUNTER</item>
+    </array>
+    <array name="en_array_7">
+        <item>UTCDNOI</item>
+        <item>DUCTION</item>
+        <item>DUCT</item>
+        <item>CONDUIT</item>
+        <item>NOCTUID</item>
+    </array>
+    <array name="en_array_8">
+        <item>SCRIEPN</item>
+        <item>PINCERS</item>
+        <item>SICER</item>
+        <item>PERSIC</item>
+        <item>PRECIS</item>
+    </array>
+    <array name="en_array_9">
+        <item>ARNDULP</item>
+        <item>LURDAN</item>
+        <item>RAND</item>
+        <item>DARN</item>
+        <item>NARD</item>
+    </array>
+    <array name="en_array_10">
+        <item>LDIAONT</item>
+        <item>IODAL</item>
+        <item>LADINO</item>
+        <item>LAID</item>
+        <item>DIAL</item>
+    </array>
+    <array name="en_array_11">
+        <item>NAEDPRL</item>
+        <item>PANDER</item>
+        <item>DANE</item>
+        <item>REPAND</item>
+        <item>PANED</item>
+    </array>
+    <array name="en_array_12">
+        <item>SRUCADT</item>
+        <item>SCAUR</item>
+        <item>SCUR</item>
+        <item>CUSTARD</item>
+        <item>CARUS</item>
+    </array>
+    <array name="en_array_13">
+        <item>LEDTASC</item>
+        <item>TALED</item>
+        <item>DELTA</item>
+        <item>CASTLED</item>
+        <item>LATED</item>
+    </array>
+    <array name="en_array_14">
+        <item>PEOSUDL</item>
         <item>EPOS</item>
-        <item>FJES</item>
-        <item>OASE</item>
         <item>PESO</item>
-        <item>SAFE</item>
-        <item>SJEF</item>
-        <item>OFSE</item>
+        <item>POSE</item>
+        <item>SOPE</item>
     </array>
-    <array name="no_array_6">
-        <item>KLASFGE</item>
-        <item>FLASKE</item>
-        <item>FLAKSE</item>
-        <item>FALSKE</item>
-        <item>GAFLES</item>
-        <item>GLEFSA</item>
-        <item>GLAFSE</item>
-        <item>KLAGE</item>
-        <item>FAKSE</item>
-        <item>AKSEL</item>
-        <item>LEFSA</item>
-        <item>LEKSA</item>
-        <item>LAGES</item>
-        <item>FLESK</item>
-        <item>AKSE</item>
-        <item>ASKE</item>
-        <item>ELSK</item>
-        <item>FASE</item>
-        <item>SAFE</item>
-        <item>SALG</item>
-        <item>SEGL</item>
-        <item>SKAG</item>
-        <item>SKAL</item>
-        <item>SLAG</item>
-        <item>SLAK</item>
+    <array name="en_array_15">
+        <item>ASNPCLE</item>
+        <item>ENCLASP</item>
+        <item>SNAP</item>
+        <item>SPANCEL</item>
+        <item>SPAN</item>
     </array>
-    <array name="no_array_7">
-        <item>ØOHFERT</item>
-        <item>FØRHET</item>
-        <item>HOFTER</item>
-        <item>FORET</item>
-        <item>FORTE</item>
-        <item>FOTER</item>
-        <item>FRØET</item>
-        <item>FØRET</item>
-        <item>FØRTE</item>
-        <item>HOFTE</item>
-        <item>OFRET</item>
-        <item>RØFT</item>
-        <item>TROFE</item>
-        <item>FORT</item>
-        <item>FØRE</item>
-        <item>FØRT</item>
-        <item>OFRE</item>
-        <item>OFTE</item>
-        <item>RØFT</item>
+    <array name="en_array_16">
+        <item>RNEDLOU</item>
+        <item>DERN</item>
+        <item>REND</item>
+        <item>ROUNDEL</item>
+        <item>RONDEL</item>
+    </array>
+    <array name="en_array_17">
+        <item>NUSREIP</item>
+        <item>RUSINE</item>
+        <item>NURSE</item>
+        <item>INSURE</item>
+        <item>URSINE</item>
+    </array>
+    <array name="en_array_18">
+        <item>OERNAPD</item>
+        <item>PANDORE</item>
+        <item>NERO</item>
+        <item>APRONED</item>
+        <item>OPERAND</item>
+    </array>
+    <array name="en_array_19">
+        <item>TRAPNCE</item>
+        <item>TRAP</item>
+        <item>PART</item>
+        <item>RAPT</item>
+        <item>PRECANT</item>
+    </array>
+    <array name="en_array_20">
+        <item>DNARPOS</item>
+        <item>PARDON</item>
+        <item>RAND</item>
+        <item>DARN</item>
+        <item>NARD</item>
+    </array>
+    <array name="en_array_21">
+        <item>AOSLTUN</item>
+        <item>STOLA</item>
+        <item>SLOAT</item>
+        <item>SOAL</item>
+        <item>SOLA</item>
+    </array>
+    <array name="en_array_22">
+        <item>CEUOSTD</item>
+        <item>SOUCE</item>
+        <item>ESCOUT</item>
+        <item>CUTOSE</item>
+        <item>CUSTODE</item>
+    </array>
+    <array name="en_array_23">
+        <item>DAROTUE</item>
+        <item>ROAD</item>
+        <item>TROAD</item>
+        <item>TARDO</item>
+        <item>OUTDARE</item>
+    </array>
+    <array name="en_array_24">
+        <item>ITLARNC</item>
+        <item>TRIAL</item>
+        <item>TRAIL</item>
+        <item>TRINAL</item>
+        <item>TAIL</item>
+    </array>
+    <array name="en_array_25">
+        <item>DRTUNEI</item>
+        <item>DETURN</item>
+        <item>INTRUDE</item>
+        <item>RETUND</item>
+        <item>DUNTER</item>
+    </array>
+    <array name="en_array_26">
+        <item>EUTRPNL</item>
+        <item>ERUPT</item>
+        <item>TRUE</item>
+        <item>TURNEP</item>
+        <item>PUNTER</item>
+    </array>
+    <array name="en_array_27">
+        <item>ORETACN</item>
+        <item>TORE</item>
+        <item>ROTE</item>
+        <item>ENACTOR</item>
+        <item>ERATO</item>
+    </array>
+    <array name="en_array_28">
+        <item>TSPLEUA</item>
+        <item>SPELT</item>
+        <item>PULSATE</item>
+        <item>LEPTUS</item>
+        <item>SLEPT</item>
+    </array>
+    <array name="en_array_29">
+        <item>PETASUD</item>
+        <item>PASTE</item>
+        <item>PATE</item>
+        <item>SPATE</item>
+        <item>PEAT</item>
+    </array>
+    <array name="en_array_30">
+        <item>ROITULD</item>
+        <item>TURIO</item>
+        <item>TIRO</item>
+        <item>RIOT</item>
+        <item>TRIO</item>
+    </array>
+    <array name="en_array_31">
+        <item>SPEACTR</item>
+        <item>SPAE</item>
+        <item>ASPECT</item>
+        <item>SPACE</item>
+        <item>SCAPE</item>
+    </array>
+    <array name="en_array_32">
+        <item>UOETRNI</item>
+        <item>ROUTE</item>
+        <item>ROUET</item>
+        <item>OUTRE</item>
+        <item>OUTER</item>
+    </array>
+    <array name="en_array_33">
+        <item>EOLDPIN</item>
+        <item>DOLE</item>
+        <item>DIPLOE</item>
+        <item>LEOD</item>
+        <item>LODE</item>
+    </array>
+    <array name="en_array_34">
+        <item>LAUSCED</item>
+        <item>LAUS</item>
+        <item>CLAUSE</item>
+        <item>SULA</item>
+        <item>SAUL</item>
+    </array>
+    <array name="en_array_35">
+        <item>LPATOED</item>
+        <item>TADPOLE</item>
+        <item>PLAT</item>
+        <item>PELOTA</item>
+        <item>POTALE</item>
+    </array>
+    <array name="en_array_36">
+        <item>DELPICN</item>
+        <item>PILED</item>
+        <item>PLED</item>
+        <item>PLIED</item>
+        <item>LEPID</item>
+    </array>
+    <array name="en_array_37">
+        <item>NCREADS</item>
+        <item>DANCER</item>
+        <item>NACRE</item>
+        <item>CRANE</item>
+        <item>CEDARN</item>
+    </array>
+    <array name="en_array_38">
+        <item>EDAORPT</item>
+        <item>ADORE</item>
+        <item>READOPT</item>
+        <item>ADOPTER</item>
+        <item>OREAD</item>
+    </array>
+    <array name="en_array_39">
+        <item>RPTOECI</item>
+        <item>TOPER</item>
+        <item>PORTE</item>
+        <item>PORT</item>
+        <item>TEPOR</item>
+    </array>
+    <array name="en_array_40">
+        <item>LTECAPU</item>
+        <item>ECTAL</item>
+        <item>CLEAT</item>
+        <item>CELT</item>
+        <item>CATEL</item>
+        <item>CAPULET</item>
+    </array>
+    <array name="en_array_41">
+        <item>AODLRUN</item>
+        <item>ODAL</item>
+        <item>NODULAR</item>
+        <item>LOAD</item>
+        <item>ORDAL</item>
+        <item>ADUROL</item>
+    </array>
+    <array name="en_array_42">
+        <item>PIEDLRA</item>
+        <item>PIED</item>
+        <item>PLIED</item>
+        <item>PILED</item>
+        <item>PERLID</item>
+        <item>LEPID</item>
+    </array>
+    <array name="en_array_43">
+        <item>ICERAPL</item>
+        <item>CERIA</item>
+        <item>CRAIE</item>
+        <item>RICE</item>
+        <item>ERICA</item>
+        <item>REPLICA</item>
+    </array>
+    <array name="en_array_44">
+        <item>ITRDEAO</item>
+        <item>TRIDE</item>
+        <item>TIRED</item>
+        <item>TRIED</item>
+        <item>TIRADE</item>
+        <item>DIRT</item>
+    </array>
+    <array name="en_array_45">
+        <item>EURSDLN</item>
+        <item>SUER</item>
+        <item>DRUSE</item>
+        <item>SURE</item>
+        <item>RUSE</item>
+        <item>USER</item>
+    </array>
+    <array name="en_array_46">
+        <item>IAEPSRU</item>
+        <item>UPRAISE</item>
+        <item>ASPIRE</item>
+        <item>PARIES</item>
+        <item>PAISE</item>
+        <item>SEPIA</item>
+    </array>
+    <array name="en_array_47">
+        <item>LOPCADI</item>
+        <item>COPAL</item>
+        <item>COLP</item>
+        <item>PLACOID</item>
+        <item>PODICAL</item>
+        <item>PLOC</item>
+    </array>
+    <array name="en_array_48">
+        <item>PLESINR</item>
+        <item>LIPSE</item>
+        <item>SLEP</item>
+        <item>SPINEL</item>
+        <item>PILES</item>
+        <item>SPILE</item>
+    </array>
+    <array name="en_array_49">
+        <item>ARTSLIC</item>
+        <item>STAR</item>
+        <item>STILAR</item>
+        <item>SART</item>
+        <item>CARLIST</item>
+        <item>TSAR</item>
+    </array>
+    <array name="en_array_50">
+        <item>ETSPIDN</item>
+        <item>SEPT</item>
+        <item>STIPEND</item>
+        <item>PISTE</item>
+        <item>STEP</item>
+        <item>SPET</item>
+    </array>
+    <array name="en_array_51">
+        <item>UDALTPC</item>
+        <item>DUAL</item>
+        <item>LAUD</item>
+        <item>ADULT</item>
+        <item>AULD</item>
+        <item>UDAL</item>
+    </array>
+    <array name="en_array_52">
+        <item>DSEIATO</item>
+        <item>IDES</item>
+        <item>SIDE</item>
+        <item>ASIDE</item>
+        <item>DEIS</item>
+        <item>SEID</item>
+    </array>
+    <array name="en_array_53">
+        <item>SDELICT</item>
+        <item>SLIDE</item>
+        <item>SIDLE</item>
+        <item>SLED</item>
+        <item>SLEID</item>
+        <item>SELD</item>
+    </array>
+    <array name="en_array_54">
+        <item>EDTIUAR</item>
+        <item>TIDE</item>
+        <item>DIET</item>
+        <item>AURITED</item>
+        <item>DITE</item>
+        <item>EDIT</item>
+    </array>
+    <array name="en_array_55">
+        <item>TLAIPNE</item>
+        <item>PENTAIL</item>
+        <item>PANTILE</item>
+        <item>TAIL</item>
+        <item>PLATIN</item>
+        <item>PLAINT</item>
+    </array>
+    <array name="en_array_56">
+        <item>IUTSNOD</item>
+        <item>UTIS</item>
+        <item>INUST</item>
+        <item>USTION</item>
+        <item>SUINT</item>
+        <item>SUIT</item>
+    </array>
+    <array name="en_array_57">
+        <item>PEROADN</item>
+        <item>PORE</item>
+        <item>PANDORE</item>
+        <item>ROPE</item>
+        <item>OPERAND</item>
+        <item>APRONED</item>
+    </array>
+    <array name="en_array_58">
+        <item>EPSLINT</item>
+        <item>LIPSE</item>
+        <item>SLEP</item>
+        <item>SPINEL</item>
+        <item>PLENIST</item>
+        <item>PILES</item>
+        <item>SPILE</item>
+    </array>
+    <array name="en_array_59">
+        <item>PTRESOI</item>
+        <item>PRESTO</item>
+        <item>PREST</item>
+        <item>REPOSIT</item>
+        <item>PORITES</item>
+        <item>PORTISE</item>
+        <item>PERT</item>
+    </array>
+    <array name="en_array_60">
+        <item>ERSALPU</item>
+        <item>RASE</item>
+        <item>SERPULA</item>
+        <item>SEAR</item>
+        <item>ARLES</item>
+        <item>LARES</item>
+        <item>ARSE</item>
+    </array>
+    <array name="en_array_61">
+        <item>ANRIUDL</item>
+        <item>DIURNAL</item>
+        <item>RANI</item>
+        <item>DIURNA</item>
+        <item>IRAN</item>
+        <item>AURIN</item>
+        <item>RAIN</item>
+    </array>
+    <array name="en_array_62">
+        <item>TEUSOCP</item>
+        <item>UTES</item>
+        <item>CUTOSE</item>
+        <item>PECTOUS</item>
+        <item>ESCOUT</item>
+        <item>SUET</item>
+        <item>TOUSE</item>
+    </array>
+    <array name="en_array_63">
+        <item>IEPDLSC</item>
+        <item>DISPEL</item>
+        <item>PIED</item>
+        <item>PLIED</item>
+        <item>PILED</item>
+        <item>DISPLE</item>
+        <item>LEPID</item>
+    </array>
+    <array name="en_array_64">
+        <item>TESUPNA</item>
+        <item>UNSTEP</item>
+        <item>UTES</item>
+        <item>UPSET</item>
+        <item>SUET</item>
+        <item>SPUTE</item>
+        <item>STUPE</item>
+    </array>
+    <array name="en_array_65">
+        <item>TAONICP</item>
+        <item>ATONIC</item>
+        <item>CAPTION</item>
+        <item>ANITO</item>
+        <item>ACTION</item>
+        <item>CATION</item>
+        <item>PACTION</item>
+    </array>
+    <array name="en_array_66">
+        <item>NITRASU</item>
+        <item>INSTAR</item>
+        <item>TARIN</item>
+        <item>STRAIN</item>
+        <item>TRAIN</item>
+        <item>RIANT</item>
+        <item>TAIRN</item>
+    </array>
+    <array name="en_array_67">
+        <item>AERIDPN</item>
+        <item>DIAPER</item>
+        <item>PARDINE</item>
+        <item>REPAID</item>
+        <item>REDIA</item>
+        <item>AIDER</item>
+        <item>IRADE</item>
+    </array>
+    <array name="en_array_68">
+        <item>IETDLOA</item>
+        <item>TIDE</item>
+        <item>DELIT</item>
+        <item>DIET</item>
+        <item>TILDE</item>
+        <item>DITE</item>
+        <item>EDIT</item>
+    </array>
+    <array name="en_array_69">
+        <item>ECTIRDL</item>
+        <item>DIRECT</item>
+        <item>TICE</item>
+        <item>CITE</item>
+        <item>CREDIT</item>
+        <item>TRICE</item>
+        <item>CITER</item>
+    </array>
+    <array name="en_array_70">
+        <item>ERADOUI</item>
+        <item>READ</item>
+        <item>DARE</item>
+        <item>RADE</item>
+        <item>DEAR</item>
+        <item>ADORE</item>
+        <item>OREAD</item>
+    </array>
+    <array name="en_array_71">
+        <item>INRADCE</item>
+        <item>RANI</item>
+        <item>IRAN</item>
+        <item>RANCID</item>
+        <item>DRACIN</item>
+        <item>RAIN</item>
+        <item>DRAIN</item>
+    </array>
+    <array name="en_array_72">
+        <item>NERDTIO</item>
+        <item>RIDENT</item>
+        <item>DERN</item>
+        <item>TINDER</item>
+        <item>TREND</item>
+        <item>REND</item>
+        <item>DRENT</item>
+    </array>
+    <array name="en_array_73">
+        <item>USRATED</item>
+        <item>AUSTER</item>
+        <item>SAUTER</item>
+        <item>SUTRA</item>
+        <item>SURA</item>
+        <item>SAUR</item>
+        <item>URSA</item>
+    </array>
+    <array name="en_array_74">
+        <item>CNEAISR</item>
+        <item>ACNE</item>
+        <item>ANCE</item>
+        <item>INCASE</item>
+        <item>CERASIN</item>
+        <item>CASEIN</item>
+        <item>ARSENIC</item>
+    </array>
+    <array name="en_array_75">
+        <item>ORPELTI</item>
+        <item>PORE</item>
+        <item>LOPER</item>
+        <item>ROPE</item>
+        <item>POITREL</item>
+        <item>PETROL</item>
+        <item>POLER</item>
+    </array>
+    <array name="en_array_76">
+        <item>LEIDRSP</item>
+        <item>SLIDER</item>
+        <item>IDLE</item>
+        <item>LIED</item>
+        <item>IDLER</item>
+        <item>DEIL</item>
+        <item>EILD</item>
+    </array>
+    <array name="en_array_77">
+        <item>NIATCOE</item>
+        <item>ATONIC</item>
+        <item>ANTI</item>
+        <item>ACONITE</item>
+        <item>ANTIC</item>
+        <item>ACTION</item>
+        <item>CATION</item>
+        <item>TAIN</item>
+    </array>
+    <array name="en_array_78">
+        <item>RANECSU</item>
+        <item>NACRE</item>
+        <item>NEAR</item>
+        <item>CRANE</item>
+        <item>CASERN</item>
+        <item>NARE</item>
+        <item>EARN</item>
+        <item>SURANCE</item>
+    </array>
+    <array name="en_array_79">
+        <item>ETLACPD</item>
+        <item>TEAL</item>
+        <item>ECTAL</item>
+        <item>CLEAT</item>
+        <item>LEAT</item>
+        <item>TALE</item>
+        <item>CATEL</item>
+        <item>TAEL</item>
+    </array>
+    <array name="en_array_80">
+        <item>CRTUAES</item>
+        <item>CURT</item>
+        <item>CURATE</item>
+        <item>CURAT</item>
+        <item>CRUT</item>
+        <item>ACTURE</item>
+        <item>SUCRATE</item>
+        <item>CAUTER</item>
+    </array>
+    <array name="en_array_81">
+        <item>NUEDRTO</item>
+        <item>NUDE</item>
+        <item>DETURN</item>
+        <item>RETUND</item>
+        <item>DUNE</item>
+        <item>UNDE</item>
+        <item>DUNTER</item>
+        <item>UNDER</item>
+    </array>
+    <array name="en_array_82">
+        <item>OSCATRL</item>
+        <item>CATSO</item>
+        <item>TASCO</item>
+        <item>SCOAT</item>
+        <item>CASTOR</item>
+        <item>COAST</item>
+        <item>SCROTAL</item>
+        <item>COSTA</item>
+    </array>
+    <array name="en_array_83">
+        <item>RDNAOEP</item>
+        <item>PANDORE</item>
+        <item>OPERAND</item>
+        <item>ADORN</item>
+        <item>APRONED</item>
+        <item>RAND</item>
+        <item>DARN</item>
+        <item>NARD</item>
+    </array>
+    <array name="en_array_84">
+        <item>DPELIOS</item>
+        <item>SOLIPED</item>
+        <item>PLIED</item>
+        <item>PILED</item>
+        <item>DIPLOE</item>
+        <item>PLED</item>
+        <item>DESPOIL</item>
+        <item>LEPID</item>
+    </array>
+    <array name="en_array_85">
+        <item>EORSLAI</item>
+        <item>EROS</item>
+        <item>SORE</item>
+        <item>SEOR</item>
+        <item>LOSER</item>
+        <item>ROSEAL</item>
+        <item>ROSE</item>
+        <item>SOREL</item>
+    </array>
+    <array name="en_array_86">
+        <item>NRIAEPS</item>
+        <item>RAPINE</item>
+        <item>PERSIAN</item>
+        <item>RANI</item>
+        <item>IRAN</item>
+        <item>ARPINE</item>
+        <item>PANIER</item>
+        <item>RAIN</item>
+    </array>
+    <array name="en_array_87">
+        <item>ASOCTID</item>
+        <item>SCOTIA</item>
+        <item>CATSO</item>
+        <item>TASCO</item>
+        <item>SOTADIC</item>
+        <item>SCOAT</item>
+        <item>COAST</item>
+        <item>COSTA</item>
+    </array>
+    <array name="en_array_88">
+        <item>ARCSEOD</item>
+        <item>SARCODE</item>
+        <item>CARSE</item>
+        <item>SACRE</item>
+        <item>SCARE</item>
+        <item>SCAR</item>
+        <item>CRASE</item>
+        <item>SERAC</item>
+    </array>
+    <array name="en_array_89">
+        <item>ITAERLN</item>
+        <item>TRAINEL</item>
+        <item>LATRINE</item>
+        <item>RETAIL</item>
+        <item>RETINAL</item>
+        <item>RELIANT</item>
+        <item>ENTRAIL</item>
+        <item>TRENAIL</item>
+        <item>IRATE</item>
+    </array>
+    <array name="en_array_90">
+        <item>USRETOC</item>
+        <item>SOUTER</item>
+        <item>SUER</item>
+        <item>SURE</item>
+        <item>OUSTER</item>
+        <item>RUSE</item>
+        <item>TOUSER</item>
+        <item>USER</item>
+        <item>TROUSE</item>
+    </array>
+    <array name="en_array_91">
+        <item>TARUENI</item>
+        <item>RUINATE</item>
+        <item>AUNTER</item>
+        <item>TAURINE</item>
+        <item>TAUR</item>
+        <item>NATURE</item>
+        <item>URATE</item>
+        <item>URINATE</item>
+        <item>URANITE</item>
+    </array>
+    <array name="en_array_92">
+        <item>EDLIAPU</item>
+        <item>ALIPED</item>
+        <item>PLEIAD</item>
+        <item>IDLE</item>
+        <item>LIED</item>
+        <item>PEDIAL</item>
+        <item>DEIL</item>
+        <item>IDEAL</item>
+        <item>EILD</item>
+    </array>
+    <array name="en_array_93">
+        <item>PSOEDIA</item>
+        <item>EPOS</item>
+        <item>SPIODEA</item>
+        <item>PESO</item>
+        <item>ADIPOSE</item>
+        <item>SOPE</item>
+        <item>POSIED</item>
+        <item>POSE</item>
+        <item>POSED</item>
+    </array>
+    <array name="en_array_94">
+        <item>ALSTUNI</item>
+        <item>SALT</item>
+        <item>TALUS</item>
+        <item>SLAT</item>
+        <item>UNALIST</item>
+        <item>STAL</item>
+        <item>SAULT</item>
+        <item>SULTAN</item>
+        <item>LAST</item>
+    </array>
+    <array name="en_array_95">
+        <item>LEARDTI</item>
+        <item>ALDER</item>
+        <item>LARE</item>
+        <item>DARTLE</item>
+        <item>REAL</item>
+        <item>EARL</item>
+        <item>DILATER</item>
+        <item>LEAR</item>
+        <item>RALE</item>
+    </array>
+    <array name="en_array_96">
+        <item>URENITA</item>
+        <item>RUINATE</item>
+        <item>URINE</item>
+        <item>TRIUNE</item>
+        <item>TAURINE</item>
+        <item>UNITER</item>
+        <item>URINATE</item>
+        <item>RUNE</item>
+        <item>URANITE</item>
+        <item>INURE</item>
+    </array>
+    <array name="en_array_97">
+        <item>EITRLDN</item>
+        <item>TENDRIL</item>
+        <item>REIT</item>
+        <item>TRINDLE</item>
+        <item>ITER</item>
+        <item>TIER</item>
+        <item>TIRE</item>
+        <item>LITRE</item>
+        <item>TILER</item>
+        <item>RITE</item>
+    </array>
+    <array name="en_array_98">
+        <item>ERTUOSC</item>
+        <item>ROUTE</item>
+        <item>SOUTER</item>
+        <item>OUTER</item>
+        <item>OUTRE</item>
+        <item>TRUE</item>
+        <item>OUSTER</item>
+        <item>TOUSER</item>
+        <item>ROUET</item>
+        <item>TROUSE</item>
+    </array>
+    <array name="en_array_99">
+        <item>ENLSIOT</item>
+        <item>SELION</item>
+        <item>ELSIN</item>
+        <item>ELISON</item>
+        <item>INSOLE</item>
+        <item>TONSILE</item>
+        <item>LESION</item>
+        <item>LISNE</item>
+        <item>ESLOIN</item>
+        <item>LENS</item>
+    </array>
+    <array name="en_array_100">
+        <item>TORSPEI</item>
+        <item>STOR</item>
+        <item>PRESTO</item>
+        <item>STROP</item>
+        <item>SPORT</item>
+        <item>REPOSIT</item>
+        <item>ROST</item>
+        <item>PORITES</item>
+        <item>SORT</item>
+        <item>PORTISE</item>
+    </array>
+    <array name="en_array_101">
+        <item>ADRNLEO</item>
+        <item>DARNEL</item>
+        <item>ALDERN</item>
+        <item>RELAND</item>
+        <item>LADRONE</item>
+        <item>ENLARD</item>
+        <item>RAND</item>
+        <item>DARN</item>
+        <item>LANDER</item>
+        <item>NARD</item>
+    </array>
+    <array name="en_array_102">
+        <item>EPALDTN</item>
+        <item>PLEAD</item>
+        <item>PELA</item>
+        <item>DEPLANT</item>
+        <item>PEAL</item>
+        <item>PLANTED</item>
+        <item>PEDAL</item>
+        <item>PLEA</item>
+        <item>LEAP</item>
+        <item>PALE</item>
+    </array>
+    <array name="en_array_103">
+        <item>LOSIENC</item>
+        <item>SELION</item>
+        <item>EOLIS</item>
+        <item>ELISON</item>
+        <item>SILO</item>
+        <item>INSOLE</item>
+        <item>LESION</item>
+        <item>SOLI</item>
+        <item>ESLOIN</item>
+        <item>SOIL</item>
+    </array>
+    <array name="en_array_104">
+        <item>TANRIEO</item>
+        <item>TARN</item>
+        <item>NART</item>
+        <item>TARIN</item>
+        <item>RETINA</item>
+        <item>RANT</item>
+        <item>TANIER</item>
+        <item>TRAIN</item>
+        <item>RIANT</item>
+        <item>NERITA</item>
+        <item>TAIRN</item>
+    </array>
+    <array name="en_array_105">
+        <item>PSALECN</item>
+        <item>SALP</item>
+        <item>ELAPS</item>
+        <item>LAPSE</item>
+        <item>SLAP</item>
+        <item>SPALE</item>
+        <item>SPANCEL</item>
+        <item>SEPAL</item>
+        <item>LEPAS</item>
+        <item>ENCLASP</item>
+        <item>SLAPE</item>
+        <item>SALEP</item>
+    </array>
+    <array name="en_array_106">
+        <item>INALECP</item>
+        <item>ANIL</item>
+        <item>NAIL</item>
+        <item>ALIEN</item>
+        <item>LAIN</item>
+        <item>ALINE</item>
+        <item>ANILE</item>
+        <item>INLACE</item>
+        <item>PANICLE</item>
+        <item>ANCILE</item>
+        <item>PELICAN</item>
+        <item>CAPELIN</item>
+    </array>
+    <array name="en_array_107">
+        <item>ERTCALS</item>
+        <item>TRACE</item>
+        <item>CLARET</item>
+        <item>CARTEL</item>
+        <item>CREAT</item>
+        <item>CATER</item>
+        <item>SCARLET</item>
+        <item>REACT</item>
+        <item>LACERT</item>
+        <item>CASTREL</item>
+        <item>CRATE</item>
+        <item>RECTAL</item>
+        <item>CARET</item>
+    </array>
+    <array name="en_array_108">
+        <item>ASLEPTI</item>
+        <item>ELAPS</item>
+        <item>PASTEL</item>
+        <item>LAPSE</item>
+        <item>SLAPE</item>
+        <item>SPALE</item>
+        <item>STAPLE</item>
+        <item>SEPAL</item>
+        <item>LEPAS</item>
+        <item>TALIPES</item>
+        <item>SALE</item>
+        <item>SEPTAL</item>
+        <item>SALEP</item>
+        <item>SEAL</item>
+    </array>
+    <array name="en_array_109">
+        <item>AETRCNS</item>
+        <item>TRACE</item>
+        <item>RATE</item>
+        <item>TRANCE</item>
+        <item>CREAT</item>
+        <item>CATER</item>
+        <item>REACT</item>
+        <item>ARET</item>
+        <item>NECTAR</item>
+        <item>RECANT</item>
+        <item>TANREC</item>
+        <item>CRATE</item>
+        <item>TARE</item>
+        <item>CRETAN</item>
+        <item>CANTER</item>
+        <item>TEAR</item>
+        <item>CARET</item>
+        <item>CREANT</item>
+    </array>
+    <array name="nb_array_0">
+        <item>tøffere</item>
+        <item>tøffere</item>
+        <item>tøffer</item>
+        <item>tøff</item>
+        <item>tøffe</item>
+    </array>
+    <array name="nb_array_1">
+        <item>spongen</item>
+        <item>spon</item>
+        <item>snop</item>
+        <item>spong</item>
+        <item>spongen</item>
+    </array>
+    <array name="nb_array_2">
+        <item>begeret</item>
+        <item>berge</item>
+        <item>begeret</item>
+        <item>beger</item>
+        <item>begre</item>
+    </array>
+    <array name="nb_array_3">
+        <item>bastard</item>
+        <item>basta</item>
+        <item>bastard</item>
+        <item>stab</item>
+        <item>bast</item>
+    </array>
+    <array name="nb_array_4">
+        <item>finnene</item>
+        <item>finne</item>
+        <item>finnene</item>
+        <item>finn</item>
+        <item>finnen</item>
+    </array>
+    <array name="nb_array_5">
+        <item>inndele</item>
+        <item>nidelen</item>
+        <item>inndele</item>
+        <item>linden</item>
+        <item>innlede</item>
+    </array>
+    <array name="nb_array_6">
+        <item>sloknet</item>
+        <item>slokne</item>
+        <item>onkels</item>
+        <item>skolen</item>
+        <item>sloknet</item>
+    </array>
+    <array name="nb_array_7">
+        <item>elegien</item>
+        <item>egle</item>
+        <item>elegien</item>
+        <item>lege</item>
+        <item>elegi</item>
+    </array>
+    <array name="nb_array_8">
+        <item>skufler</item>
+        <item>skufler</item>
+        <item>fusk</item>
+        <item>fluks</item>
+        <item>skufle</item>
+    </array>
+    <array name="nb_array_9">
+        <item>brekken</item>
+        <item>bekker</item>
+        <item>brek</item>
+        <item>brekke</item>
+        <item>brekken</item>
+    </array>
+    <array name="nb_array_10">
+        <item>tollere</item>
+        <item>trolle</item>
+        <item>tolle</item>
+        <item>tollere</item>
+        <item>toll</item>
+        <item>toller</item>
+    </array>
+    <array name="nb_array_11">
+        <item>�steder</item>
+        <item>s�te</item>
+        <item>�sted</item>
+        <item>d�sete</item>
+        <item>�steder</item>
+        <item>d�set</item>
+    </array>
+    <array name="nb_array_12">
+        <item>brygget</item>
+        <item>bygger</item>
+        <item>brygget</item>
+        <item>brygg</item>
+        <item>brygge</item>
+        <item>byrg</item>
+    </array>
+    <array name="nb_array_13">
+        <item>røntgen</item>
+        <item>grøten</item>
+        <item>røntgen</item>
+        <item>grønet</item>
+        <item>tørn</item>
+        <item>grønt</item>
+    </array>
+    <array name="nb_array_14">
+        <item>omsette</item>
+        <item>omsette</item>
+        <item>mose</item>
+        <item>tomsete</item>
+        <item>tomset</item>
+        <item>moset</item>
+    </array>
+    <array name="nb_array_15">
+        <item>mj�lent</item>
+        <item>mølje</item>
+        <item>mjøl</item>
+        <item>mjølent</item>
+        <item>mjølen</item>
+        <item>mjøle</item>
+    </array>
+    <array name="nb_array_16">
+        <item>seraiet</item>
+        <item>sera</item>
+        <item>seraiet</item>
+        <item>aser</item>
+        <item>reisa</item>
+        <item>rase</item>
+    </array>
+    <array name="nb_array_17">
+        <item>pakkens</item>
+        <item>pakkens</item>
+        <item>pakke</item>
+        <item>pekka</item>
+        <item>pakken</item>
+        <item>pakk</item>
+    </array>
+    <array name="nb_array_18">
+        <item>særegne</item>
+        <item>sære</item>
+        <item>særegne</item>
+        <item>æres</item>
+        <item>særegen</item>
+        <item>æser</item>
+    </array>
+    <array name="nb_array_19">
+        <item>holdere</item>
+        <item>holdere</item>
+        <item>herold</item>
+        <item>holder</item>
+        <item>holde</item>
+        <item>hold</item>
+    </array>
+    <array name="nb_array_20">
+        <item>vimsete</item>
+        <item>vims</item>
+        <item>svime</item>
+        <item>vimsete</item>
+        <item>vimset</item>
+        <item>vimse</item>
+    </array>
+    <array name="nb_array_21">
+        <item>strutta</item>
+        <item>strutta</item>
+        <item>trust</item>
+        <item>stur</item>
+        <item>rust</item>
+        <item>surt</item>
+    </array>
+    <array name="nb_array_22">
+        <item>fråsent</item>
+        <item>fråsen</item>
+        <item>fåres</item>
+        <item>fråse</item>
+        <item>fråsent</item>
+        <item>frås</item>
+    </array>
+    <array name="nb_array_23">
+        <item>tvinges</item>
+        <item>gesvint</item>
+        <item>tvinge</item>
+        <item>svinget</item>
+        <item>svingte</item>
+        <item>tvinges</item>
+        <item>gevinst</item>
+    </array>
+    <array name="nb_array_24">
+        <item>pastell</item>
+        <item>spat</item>
+        <item>pastell</item>
+        <item>lapset</item>
+        <item>pesta</item>
+        <item>spalte</item>
+        <item>stapel</item>
+    </array>
+    <array name="nb_array_25">
+        <item>stoppen</item>
+        <item>sopt</item>
+        <item>topps</item>
+        <item>stopp</item>
+        <item>stoppe</item>
+        <item>post</item>
+        <item>stoppen</item>
+        <item>toppes</item>
+    </array>
+    <array name="nb_array_26">
+        <item>studien</item>
+        <item>studie</item>
+        <item>dust</item>
+        <item>utside</item>
+        <item>stud</item>
+        <item>studien</item>
+        <item>dusinet</item>
+        <item>utsiden</item>
+    </array>
+    <array name="nb_array_27">
+        <item>skotten</item>
+        <item>tosket</item>
+        <item>tosk</item>
+        <item>skott</item>
+        <item>skotte</item>
+        <item>skotten</item>
+        <item>kost</item>
+        <item>kostet</item>
+    </array>
+    <array name="nb_array_28">
+        <item>mankere</item>
+        <item>markene</item>
+        <item>anmerke</item>
+        <item>karmen</item>
+        <item>manke</item>
+        <item>mankere</item>
+        <item>marken</item>
+        <item>maken</item>
+    </array>
+    <array name="nb_array_29">
+        <item>dragsug</item>
+        <item>gards</item>
+        <item>gard</item>
+        <item>grad</item>
+        <item>drag</item>
+        <item>dragsu</item>
+        <item>dragsug</item>
+        <item>drags</item>
+    </array>
+    <array name="nb_array_30">
+        <item>kanoner</item>
+        <item>koranen</item>
+        <item>kanoen</item>
+        <item>kanoner</item>
+        <item>kona</item>
+        <item>kanon</item>
+        <item>orkanen</item>
+        <item>kano</item>
+    </array>
+    <array name="nb_array_31">
+        <item>slipers</item>
+        <item>spil</item>
+        <item>sliper</item>
+        <item>slipers</item>
+        <item>spile</item>
+        <item>sleip</item>
+        <item>speil</item>
+        <item>pils</item>
+        <item>slipe</item>
+    </array>
+    <array name="nb_array_32">
+        <item>avledet</item>
+        <item>avdele</item>
+        <item>avledet</item>
+        <item>dvale</item>
+        <item>elva</item>
+        <item>lave</item>
+        <item>avdelte</item>
+        <item>avlede</item>
+        <item>avle</item>
+    </array>
+    <array name="nb_array_33">
+        <item>geitens</item>
+        <item>geiten</item>
+        <item>geitens</item>
+        <item>teigen</item>
+        <item>geniet</item>
+        <item>geit</item>
+        <item>geite</item>
+        <item>teig</item>
+        <item>eignet</item>
+    </array>
+    <array name="nb_array_34">
+        <item>utenfra</item>
+        <item>tune</item>
+        <item>utenfra</item>
+        <item>furten</item>
+        <item>uten</item>
+        <item>furtne</item>
+        <item>unte</item>
+        <item>nuet</item>
+        <item>futen</item>
+    </array>
+    <array name="nb_array_35">
+        <item>skrifta</item>
+        <item>irsk</item>
+        <item>risk</item>
+        <item>skir</item>
+        <item>skrifta</item>
+        <item>skrift</item>
+        <item>friskt</item>
+        <item>frisk</item>
+        <item>skri</item>
+    </array>
+    <array name="nb_array_36">
+        <item>beitene</item>
+        <item>beinete</item>
+        <item>beitene</item>
+        <item>beite</item>
+        <item>bite</item>
+        <item>bitene</item>
+        <item>biet</item>
+        <item>beit</item>
+        <item>beinet</item>
+    </array>
+    <array name="nb_array_37">
+        <item>genitiv</item>
+        <item>gein</item>
+        <item>geni</item>
+        <item>genitiv</item>
+        <item>tinge</item>
+        <item>enig</item>
+        <item>inge</item>
+        <item>gnei</item>
+        <item>eting</item>
+    </array>
+    <array name="nb_array_38">
+        <item>devlene</item>
+        <item>levd</item>
+        <item>devel</item>
+        <item>dvele</item>
+        <item>velde</item>
+        <item>levde</item>
+        <item>levende</item>
+        <item>levned</item>
+        <item>devlene</item>
+    </array>
+    <array name="nb_array_39">
+        <item>portene</item>
+        <item>torp</item>
+        <item>ropte</item>
+        <item>porten</item>
+        <item>ropt</item>
+        <item>tropen</item>
+        <item>ropet</item>
+        <item>tropene</item>
+        <item>port</item>
+        <item>portene</item>
+    </array>
+    <array name="nb_array_40">
+        <item>mestere</item>
+        <item>mestere</item>
+        <item>mest</item>
+        <item>meters</item>
+        <item>smerte</item>
+        <item>mestre</item>
+        <item>meste</item>
+        <item>merset</item>
+        <item>remset</item>
+        <item>mester</item>
+    </array>
+    <array name="nb_array_41">
+        <item>skritte</item>
+        <item>irsk</item>
+        <item>risk</item>
+        <item>skritte</item>
+        <item>strikt</item>
+        <item>skritt</item>
+        <item>skir</item>
+        <item>skri</item>
+        <item>triks</item>
+        <item>trikset</item>
+    </array>
+    <array name="nb_array_42">
+        <item>strande</item>
+        <item>sart</item>
+        <item>strande</item>
+        <item>snart</item>
+        <item>snadret</item>
+        <item>tsar</item>
+        <item>strand</item>
+        <item>rast</item>
+        <item>stander</item>
+        <item>star</item>
+    </array>
+    <array name="nb_array_43">
+        <item>satsene</item>
+        <item>stas</item>
+        <item>satse</item>
+        <item>stanse</item>
+        <item>satsen</item>
+        <item>tasse</item>
+        <item>stasen</item>
+        <item>sats</item>
+        <item>satsene</item>
+        <item>tass</item>
+        <item>stase</item>
+        <item>tassen</item>
+    </array>
+    <array name="nb_array_44">
+        <item>gardens</item>
+        <item>graden</item>
+        <item>gard</item>
+        <item>garde</item>
+        <item>dager</item>
+        <item>agder</item>
+        <item>grad</item>
+        <item>drag</item>
+        <item>grenda</item>
+        <item>drage</item>
+        <item>gardens</item>
+        <item>dragen</item>
+        <item>dragne</item>
+        <item>garden</item>
+    </array>
+    <array name="nb_array_45">
+        <item>raskest</item>
+        <item>akser</item>
+        <item>sakser</item>
+        <item>rask</item>
+        <item>raske</item>
+        <item>raskest</item>
+        <item>karse</item>
+        <item>skar</item>
+        <item>asker</item>
+        <item>skare</item>
+        <item>krase</item>
+        <item>krasse</item>
+        <item>saker</item>
+        <item>kasser</item>
+    </array>
+    <array name="nb_array_46">
+        <item>partene</item>
+        <item>praten</item>
+        <item>parten</item>
+        <item>partene</item>
+        <item>part</item>
+        <item>prat</item>
+        <item>pater</item>
+        <item>tapre</item>
+        <item>rapt</item>
+        <item>prate</item>
+        <item>paret</item>
+        <item>taper</item>
+        <item>taperen</item>
+        <item>taperne</item>
+        <item>panter</item>
+    </array>
+    <array name="nb_array_47">
+        <item>ankeret</item>
+        <item>anke</item>
+        <item>kane</item>
+        <item>anker</item>
+        <item>arken</item>
+        <item>karen</item>
+        <item>arkene</item>
+        <item>ankeret</item>
+        <item>karene</item>
+        <item>krane</item>
+        <item>knea</item>
+        <item>ankre</item>
+        <item>enakter</item>
+        <item>ranke</item>
+        <item>tankere</item>
+        <item>rakne</item>
     </array>
 </resources>

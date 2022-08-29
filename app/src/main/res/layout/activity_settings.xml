@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="INSTILLINGER"
+        android:text="INNSTILLINGER"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="80px"
@@ -40,6 +40,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
+        android:id="@+id/languageSetting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -49,18 +50,20 @@
         app:layout_constraintTop_toBottomOf="@+id/LeftHandedModeToggle">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rbNorwegian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="true"
+            android:onClick="onRadioButtonClick"
             android:text="Norsk bokmål"
             android:textColor="@color/white" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rbEnglish"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="false"
+            android:onClick="onRadioButtonClick"
             android:text="Engelsk"
             android:textColor="@color/white" />
     </RadioGroup>

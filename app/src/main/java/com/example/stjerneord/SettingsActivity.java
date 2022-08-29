@@ -5,7 +5,10 @@ import static android.graphics.Color.rgb;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.ToggleButton;
 
@@ -37,21 +40,40 @@ public class SettingsActivity extends AppCompatActivity {
                 } else {
                     LeftHandedMode = false;
                 }
-                System.out.println("---- STATUS ----");
-                System.out.println(LeftHandedMode);
             }
         });
 
-        SharedPreferences prefs = this.getSharedPreferences("com.example.app", Context.MODE_PRIVATE);
+        SharedPreferences prefs = this.getSharedPreferences("Settings", Context.MODE_PRIVATE);
         LeftHandedMode = prefs.getBoolean("LeftHandedMode", false);
         language = prefs.getInt("language", 0);
+        RadioGroup rg = (RadioGroup) findViewById(R.id.languageSetting);
+        if(language == 0) {
+            rg.check(R.id.rbNorwegian);
+        } else {
+            rg.check(R.id.rbEnglish);
+        }
         LeftHandedModeToggle.setChecked(LeftHandedMode);
+    }
+
+    public void onRadioButtonClick(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.rbNorwegian:
+                if (checked)
+                    language = 0;
+                    break;
+            case R.id.rbEnglish:
+                if (checked)
+                    language = 1;
+                    break;
+        }
     }
 
     @Override
     public void onPause() {
-        SharedPreferences prefs = this.getSharedPreferences(
-                "com.example.app", Context.MODE_PRIVATE);
+        SharedPreferences prefs = this.getSharedPreferences("Settings", Context.MODE_PRIVATE);
         prefs.edit().putBoolean("LeftHandedMode", LeftHandedMode).apply();
         prefs.edit().putInt("language", language).apply();
         System.out.println("--- SAVED INSTACE!!! ---");
@@ -60,8 +82,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle savedInstanceState) {
-        savedInstanceState.putBoolean("LeftHandedMode", LeftHandedMode);
-        savedInstanceState.putInt("language", language);
+
         System.out.println("--- SAVED INSTACE!!! ---");
         super.onSaveInstanceState(savedInstanceState);
     }
