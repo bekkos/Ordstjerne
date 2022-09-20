@@ -30,4 +30,10 @@ public class FrontPageActivity extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
+
+    public void startAnswers(View view) {
+        Intent intent = new Intent(getApplicationContext(), AnswersActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
 }

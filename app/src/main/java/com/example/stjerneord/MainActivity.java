@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
     List<Button> buttons = new ArrayList<>();
     List<WordStage> stages = new ArrayList<>();
     WordStage activeStage;
-    int level;
+    int levelEng;
+    int levelNor;
     int language;
 
 
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             buttons.add((Button) findViewById(id));
         }
         // Load letters and anagrams, create wordStages.
-        for(int i = 1; i < 42; i++) {
+        for(int i = 1; i < 10; i++) {
             String resName = "nb_array_" + i;
              if(language == 1) {
                 resName = "en_array_" + i;
@@ -71,12 +72,21 @@ public class MainActivity extends AppCompatActivity {
             WordStage wordStage = new WordStage(getResources().getStringArray(resId));
             stages.add(wordStage);
         }
+        int id = 0;
+        for (WordStage s: stages) {
+            System.out.println(id);
+            System.out.println(s.getWords());
+            id++;
+        }
+
         activeStage = stages.get(0);
-        level = 0;
+
 
 
         // LOAD
         SharedPreferences prefs = this.getSharedPreferences("SaveData", Context.MODE_PRIVATE);
+        levelNor = prefs.getInt("levelNor", 0);
+        levelEng = prefs.getInt("levelEng", 0);
         Gson gson = new Gson();
         int saveLanguage = prefs.getInt("language", 0);
         System.out.println("--- j");
@@ -95,8 +105,13 @@ public class MainActivity extends AppCompatActivity {
                 Type type = new TypeToken<List<WordStage>>(){}.getType();
                 stages = gson.fromJson(bufferStages, type);
             }
+        } else {
+            if(language == 0) {
+                activeStage = stages.get(levelNor);
+            } else {
+                activeStage = stages.get(levelEng);
+            }
         }
-        level = prefs.getInt("level", 0);
 
         updateUi();
     }
@@ -123,7 +138,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Level UI
         TextView tv2 = (TextView) findViewById(R.id.levelOutput);
-        tv2.setText("NIVÅ " + level);
+        if(language == 0) tv2.setText("NIVÅ " + levelNor);
+        if(language == 1) tv2.setText("NIVÅ " + levelEng);
+
     }
 
     public void click(View view) {
@@ -143,8 +160,7 @@ public class MainActivity extends AppCompatActivity {
         while(true) {
             if(activeStage.getDiscoveredWords().size() == activeStage.getWords().size()) break;
             String word = activeStage.getWords().get(new Random().nextInt(activeStage.getWords().size()));
-            if(!activeStage.getDiscoveredWords().contains(word)) {
-                //
+            if(!activeStage.getDiscoveredWords().contains(word.toLowerCase()) && !activeStage.getDiscoveredWords().contains(word.toUpperCase())) {
                 String out = "";
                 for(int i = 0; i < word.length(); i++) {
                     if(i == 0 || i == word.length() / 2) {
@@ -180,13 +196,18 @@ public class MainActivity extends AppCompatActivity {
         }
 
         String s = tv.getText().toString();
+        System.out.println(stages);
 
         if(!s.contains(activeStage.getMainLetter().toString())) {
             setErrorMessage("Ordet må inneholde bokstaven '" + activeStage.getMainLetter() + "'.");
+            System.out.println(activeStage.getMainLetter());
+
             return;
         }
-
-        if(activeStage.getWords().contains(tv.getText())) {
+        System.out.println(tv.getText());
+        System.out.println();
+        String inputString = (String) tv.getText();
+        if(activeStage.getWords().contains(inputString.toLowerCase()) || activeStage.getWords().contains(inputString.toUpperCase())) {
             activeStage.setScore(activeStage.getScore() + 1);
             activeStage.addDiscoveredWord((String) tv.getText());
             tv.setTextColor(Color.GREEN);
@@ -194,25 +215,29 @@ public class MainActivity extends AppCompatActivity {
             animateSuccess(tv);
             updateUi();
         } else {
+            System.out.println(activeStage.getWords());
             setErrorMessage("Ordet er ikke i listen.");
         }
 
         if(activeStage.getScore() == activeStage.getMaxScore()) {
             // PLAY STAGE END SCREEN
+            switch(language) {
+                case 0:
+                    levelNor++;
+                    activeStage = stages.get(levelNor);
+                    break;
+                case 1:
+                    levelEng++;
+                    activeStage = stages.get(levelEng);
+                    break;
+            }
             activeStage.setScore(0);
-            activeStage = stages.get(1);
-            stages.remove(0);
-            level++;
             updateUi();
         }
 
-
-
-
-
     }
 
-
+/*
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -226,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
             level = savedInstanceState.getInt("level");
         }
     }
-
+*/
 
     /* TOOLBOX */
     public void clear(View view) {
@@ -261,10 +286,12 @@ public class MainActivity extends AppCompatActivity {
         // Save active stage object
         prefs.edit().putString("activeStage", activeStageJSON).apply();
         // Save level variable
-        prefs.edit().putInt("level", level).apply();
+        prefs.edit().putInt("levelNor", levelNor).apply();
+        prefs.edit().putInt("levelEng", levelEng).apply();
         // Save stages object
         String stagesJSON = gson.toJson(stages);
         prefs.edit().putString("stages", stagesJSON).apply();
+        prefs.edit().putInt("stageScore", activeStage.getScore());
 
         prefs.edit().putInt("language", language).apply();
 
