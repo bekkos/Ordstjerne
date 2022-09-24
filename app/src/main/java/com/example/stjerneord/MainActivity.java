@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.stjerneord.models.WordStage;
 import com.google.gson.Gson;
@@ -49,9 +50,6 @@ public class MainActivity extends AppCompatActivity {
         // Check Language Setting
         SharedPreferences prefsSettings = this.getSharedPreferences("Settings", Context.MODE_PRIVATE);
         language = prefsSettings.getInt("language", 0);
-        System.out.println("-- f  --");
-        System.out.println(language);
-
 
         // Get all buttons, add to buttonList
         for (int i = 1; i < 8; i++) {
@@ -74,29 +72,21 @@ public class MainActivity extends AppCompatActivity {
         }
         int id = 0;
         for (WordStage s: stages) {
-            System.out.println(id);
-            System.out.println(s.getWords());
             id++;
         }
-
         activeStage = stages.get(0);
 
-
-
-        // LOAD
+        // Load game state and overwrite base state if exists.
         SharedPreferences prefs = this.getSharedPreferences("SaveData", Context.MODE_PRIVATE);
         levelNor = prefs.getInt("levelNor", 0);
         levelEng = prefs.getInt("levelEng", 0);
         Gson gson = new Gson();
         int saveLanguage = prefs.getInt("language", 0);
-        System.out.println("--- j");
-        System.out.println(saveLanguage);
         if(language == saveLanguage) {
             // Load activeStage
             String bufferActiveStage = prefs.getString("activeStage", "");
             if(!bufferActiveStage.equals("")) {
                 activeStage = gson.fromJson(bufferActiveStage, WordStage.class);
-
             }
 
             // Load stages
@@ -106,13 +96,13 @@ public class MainActivity extends AppCompatActivity {
                 stages = gson.fromJson(bufferStages, type);
             }
         } else {
+            // Get level based on language
             if(language == 0) {
                 activeStage = stages.get(levelNor);
             } else {
                 activeStage = stages.get(levelEng);
             }
         }
-
         updateUi();
     }
 
@@ -136,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         pb.setMax(activeStage.getMaxScore());
         pb.setProgress(activeStage.getScore());
 
-        // Level UI
+        // Level Display
         TextView tv2 = (TextView) findViewById(R.id.levelOutput);
         if(language == 0) tv2.setText("NIVÅ " + levelNor);
         if(language == 1) tv2.setText("NIVÅ " + levelEng);
@@ -144,12 +134,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void click(View view) {
+        /*
+        * Denne funksjonen kjører hver gang brukeren trykker på en av tastatur-knappene.
+        * Legger til den respektive bokstaven i utdataen og starter animasjoner for å indikere trykk.
+        * */
         Button btn = (Button) findViewById(view.getId());
         CharSequence letter = btn.getText();
         TextView tv = (TextView) findViewById(R.id.guessDisplay);
         tv.setText((String) tv.getText() + letter);
         animateViewShake(view);
-
     }
 
     public void hint(View view) {
@@ -178,7 +171,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void check(View view) {
+        /*
+        * Denne funksjonen kjører når brukeren trykker på "sjekk"-knappen.
+        * Sjekker om ordet oppfyller alle regler og krav, hvis JA så sjekker
+        * den om ordet ikke er allerede funnet. Deretter sjekker den om ordet er
+        * et løsningsord og iverkesetter riktig respons basert på det.
+        *
+        * */
         animateViewShake(view);
+
+        // Lengde sjekk
         TextView tv = (TextView) findViewById(R.id.guessDisplay);
         if(tv.getText().length() <= 3) {
             setErrorMessage("Ordet må være mer enn 3 bokstaver.");
@@ -190,22 +192,20 @@ public class MainActivity extends AppCompatActivity {
         }
         setErrorMessage("");
 
+        // Allerede funnet sjekk
         if(activeStage.getDiscoveredWords().contains(tv.getText())) {
             setErrorMessage("Du har allerede funnet dette ordet.");
             return;
         }
 
+        // Hovedbokstav er med sjekk.
         String s = tv.getText().toString();
-        System.out.println(stages);
-
         if(!s.contains(activeStage.getMainLetter().toString())) {
             setErrorMessage("Ordet må inneholde bokstaven '" + activeStage.getMainLetter() + "'.");
-            System.out.println(activeStage.getMainLetter());
-
             return;
         }
-        System.out.println(tv.getText());
-        System.out.println();
+
+        // Ord er løsningsord sjekk.
         String inputString = (String) tv.getText();
         if(activeStage.getWords().contains(inputString.toLowerCase()) || activeStage.getWords().contains(inputString.toUpperCase())) {
             activeStage.setScore(activeStage.getScore() + 1);
@@ -215,10 +215,12 @@ public class MainActivity extends AppCompatActivity {
             animateSuccess(tv);
             updateUi();
         } else {
-            System.out.println(activeStage.getWords());
             setErrorMessage("Ordet er ikke i listen.");
         }
 
+
+        // Hvis scoren er lik maksscoren så har brukeren funnet alle ordene i dette nivået
+        // og spillet går videre til neste nivå.
         if(activeStage.getScore() == activeStage.getMaxScore()) {
             // PLAY STAGE END SCREEN
             switch(language) {
@@ -234,26 +236,25 @@ public class MainActivity extends AppCompatActivity {
             activeStage.setScore(0);
             updateUi();
         }
-
     }
 
-/*
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt("level", level);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        if(savedInstanceState != null) {
-            level = savedInstanceState.getInt("level");
+    // Denne kjører når brukeren klikker for å se hvilke ord de har funnet så langt.
+    public void showProgress(View view) {
+        String out = "";
+        if(activeStage.getDiscoveredWords().size() > 0) {
+            out = "Du har funnet følgende ord så langt: \n";
+            for(String s:activeStage.getDiscoveredWords()) {
+                out += s + " ";
+            }
+        } else {
+            out = "Du har ikke funnet noen ord enda.";
         }
+        Toast toats = Toast.makeText(this, out, Toast.LENGTH_LONG);
+        toats.show();
     }
-*/
 
-    /* TOOLBOX */
+    // Kjører når brukeren trykker på "klarer"-knappen.
+    // Sletter inndataen som brukeren har skrevet så langt.
     public void clear(View view) {
         TextView tv = (TextView) findViewById(R.id.guessDisplay);
         tv.setText("");
@@ -261,12 +262,14 @@ public class MainActivity extends AppCompatActivity {
         animateViewShake(view);
     }
 
+
+    // Hjelpefunksjon for å klarere hint-teksten.
     public void clearHint(View view) {
         TextView tv2 = (TextView) findViewById(R.id.hintOutput);
         tv2.setText("");
     }
 
-
+    // Hjelpefunksjon for å endre feilmeldingen.
     public void setErrorMessage(String msg) {
         TextView errorOut = (TextView) findViewById(R.id.errorMsg);
         errorOut.setTextColor(Color.RED);
@@ -274,47 +277,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /* LAGRING */
+    /* LAGRING
+    * Denne funksjonen kjører når applikasjonen skrues av eller legges i android sin
+    * definisjon av "pause". Her lagrer vi nåværende spillstatus og data til senere.
+    * */
 
     @Override
     public void onPause() {
-
         SharedPreferences prefs = this.getSharedPreferences("SaveData", Context.MODE_PRIVATE);
         Gson gson = new Gson();
-
         String activeStageJSON = gson.toJson(activeStage);
-        // Save active stage object
+
         prefs.edit().putString("activeStage", activeStageJSON).apply();
-        // Save level variable
+
         prefs.edit().putInt("levelNor", levelNor).apply();
         prefs.edit().putInt("levelEng", levelEng).apply();
-        // Save stages object
+
         String stagesJSON = gson.toJson(stages);
         prefs.edit().putString("stages", stagesJSON).apply();
         prefs.edit().putInt("stageScore", activeStage.getScore());
-
         prefs.edit().putInt("language", language).apply();
-
-
         super.onPause();
-
     }
 
-    /* ANIMASJONER */
-    public void animateViewSpin(View view) {
-        ObjectAnimator animation = ObjectAnimator.ofFloat(view, "rotationY", 180);
-        animation.setDuration(250);
-        animation.start();
-        animation.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                ObjectAnimator animation2 = ObjectAnimator.ofFloat(view, "rotationY", 0);
-                animation2.setDuration(250);
-                animation2.start();
-            }
-        });
-    }
-
+    /* ANIMASJONER
+    /* Noen animasjoner for å gi tydeligere tilbakemeldinger til brukeren når de interagerer
+    /* med applikasjonen.
+     */
     public void animateViewShake(View view) {
         ObjectAnimator animation = ObjectAnimator.ofFloat(view, "scaleX", 1.1f);
         animation.setDuration(250);
